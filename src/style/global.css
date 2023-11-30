@@ -42,7 +42,7 @@ html {
     display: flex;
     gap: 2.7rem;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding-right: 6.1rem;
     padding-top: 3.8rem;
 }
@@ -62,7 +62,7 @@ a:hover {
     list-style: none;
     position: absolute;
     top: 11vh;
-    right: 0rem;
+    left: 0;
     width: 15vw;
     height: 30vh;
     background: #576790;
@@ -70,8 +70,8 @@ a:hover {
     flex-direction: column;
     align-items: center;
 
-    border-radius: 1rem 0 0 1rem;
-    transform: translateX(150%);
+    border-radius: 0 1rem 1rem 0;
+    transform: translateX(-400%);
     transition: transform 0.3s ;
 }
 
@@ -82,7 +82,7 @@ a:hover {
 @keyframes navLinkFade {
     from {
         opacity: 0;
-        transform: translateX(10rem);
+        transform: translateX(-10rem);
       }
       to {
         opacity: 1;
@@ -214,22 +214,37 @@ a:hover {
 }
 
 
-
 /* mobale */
-@media (max-width: 999px) {
+@media (max-width: 800px) {
     body {
         overflow-x: hidden;
     }
     
     .navList {
-        width: 30vh;
+        width: 25vh;
+        transform: translateX(-400%);
     }
+    .activ {
+        transform: translateX(0);
+    }
+
     .project {
         margin-top: 1rem;
         flex-direction: column;
         gap: 2rem;
     }
+
     .project div {
         border-radius: 0.5rem;
+    }
+
+    .apresentacao {
+        width: 100%;
+        height: 25rem;
+    }
+
+    .apresentacao p {
+        width: 60rem;
+        font-size: 1.6rem;
     }
 }
