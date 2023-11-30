@@ -248,3 +248,19 @@ a:hover {
         font-size: 1.6rem;
     }
 }
+
+@media (max-width: 599px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .apresentacao {
+        width: 100%;
+        height: 25rem;
+    }
+
+    .apresentacao p {
+        width: 35rem;
+        font-size: 1.6rem;
+    }
+}
