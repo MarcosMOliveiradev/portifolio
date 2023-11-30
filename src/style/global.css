@@ -256,11 +256,15 @@ a:hover {
 
     .apresentacao {
         width: 100%;
-        height: 25rem;
+        height: 30rem;
+    }
+
+    .apresentacao h3 {
+        font-size: 1.6rem;
     }
 
     .apresentacao p {
-        width: 35rem;
+        width: 25rem;
         font-size: 1.6rem;
     }
 }
