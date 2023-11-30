@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+
+    --IBM: font-family: 'IBM Plex Mono', monospace;
+    --Inria: font-family: 'Inria Sans', sans-serif;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+.menu div {
+    width: 3.2rem;
+    height: 0.2rem;
+    background: black;
+    margin: 0.8rem;
+    transition: 0.4s;
+}
+
+.inicial {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navBar {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    gap: 2.7rem;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 6.1rem;
+    padding-top: 3.8rem;
+}
+
+a {
+    font-family: var(--IBM);
+    color: #FFF;
+    font-size: 1.6rem;
+}
+
+a:hover {
+    color: #dfdfdf;
+}
+
+.navList {
+    display: flex;
+    list-style: none;
+    position: absolute;
+    top: 11vh;
+    right: 0rem;
+    width: 15vw;
+    height: 30vh;
+    background: #576790;
+    justify-content: space-around ;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 1rem 0 0 1rem;
+    transform: translateX(150%);
+    transition: transform 0.3s ;
+}
+
+.activ {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(10rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+}
+
+.menu.activ .ln1 {
+    transform: rotate(-45deg) translate(-0.8rem, 0.8rem);
+}
+
+.menu.activ .ln2 {
+ opacity: 0;
+}
+
+.menu.activ .ln3 {
+    transform: rotate(45deg) translate(-0.5rem, -0.7rem);
+}
+
+
+
+.top {
+    padding-top: 7.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.top h1 {
+    font-family: var(--IBM);
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.top img {
+    padding-top: 4rem;
+    width: 20rem;
+    height: 22rem;
+}
+
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5.1rem;
+    width: 100%;
+    height: 32.6rem;
+    background: #576790;
+    color: white;
+}
+
+.apresentacao h3 {
+    margin-top: 4rem;
+    font-family: var(--IBM);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.apresentacao p {
+    font-family: var(--Inria);
+    margin-top: 2.4rem;
+    font-weight: lighter;
+    font-size: 2rem;
+    width: 77rem;
+    text-align: center;
+}
+.project {
+    margin-top: -5rem;
+    display: flex;
+}
+
+.project div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32rem;
+    height: 42.8rem;
+    background: #FFF;
+    font-family: var(--IBM);
+    font-weight: 500;
+    font-size: 2rem;
+    padding-top: 4.4rem;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.project div img {
+    width: 8.1rem;
+    height: 8.1rem;
+}
+
+.project div h3 {
+    padding-top: 1.6rem;
+}
+.project div p {
+    padding: 1.6rem;
+    width: 24rem;
+    height: 10.7rem;
+    font-family: var(--Inria);
+    font-weight: lighter;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.project div h2 {
+    padding-top: 3.5rem;
+    font-weight: lighter;
+    font-size: 2rem;
+    color: #6949E9;
+}
+
+.back {
+    border-radius: 1rem 0px 0px 0px;
+}
+
+.front{
+    border: 1px solid #D4D4D4;
+}
+
+.designer {
+    border-radius: 0px 1rem 0px 0px;
+}
+
+.projeto h2 {
+    padding-top: 10rem;
+    font-family: var(--IBM);
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+
+
+/* mobale */
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .navList {
+        width: 30vh;
+    }
+    .project {
+        margin-top: 1rem;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .project div {
+        border-radius: 0.5rem;
+    }
+}
