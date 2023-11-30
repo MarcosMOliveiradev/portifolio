@@ -215,7 +215,7 @@ a:hover {
 
 
 /* mobale */
-@media (max-width: 800px) {
+@media (max-width: 999px) {
     body {
         overflow-x: hidden;
     }
